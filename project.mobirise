@@ -1,0 +1,149 @@
+{
+  "settings": {
+    "name": "Etherfi",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#2e1166"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [],
+    "usedWebp": true,
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://ether-fi-v2.github.io/sitemap.xml/\n",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://ether-fi-v2.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "favicon": false,
+    "imageResize": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.18"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Etherfi | Home | Ether.fi",
+        "meta_descr": "Stake, Earn, Spend. Stake ETH, get eETH - the liquid restaking token that rewards you more across DeFi. Start by staking ETH, and receive natively re-staked eETH for superior rewards. · Liquid vaults find yields so you don't have to. Earn more, without more effort.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://www.ether.fi/\"><img src=\"@PROJECT_PATH@/assets/images/etherfi.png\" alt=\"Etherfi\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "urmVLXr2H4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#2e1166\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">\n            <b><a href=\"https://www.ether.fi/\" class=\"text-primary\">Etherfi</a> -&nbsp;</b><b style=\"font-size: calc(2.05rem + 1.95 * ((100vw - 62rem) / 25));\">About us&nbsp;</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>What does EtherFi do?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                  Ethereum is a blockchain-based computing platform that enables developers to build and deploy decentralized applications—meaning not run by a centralized authority. You can create a decentralized application for which the participants of that particular application are the decision-making authority.\n                </p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>ether.fi ~ Decentralized Ethereum Staking Protocol</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                  Our unique protocol empowers you to stake your ETH while retaining full control of your private keys. No compromises, just pure decentralized staking.\n                </p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>What is <a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a>? A new approach to Ethereum staking</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a> is a decentralized, non-custodial liquid staking platform that brings positive disruption to DeFi by allowing staking on Ethereum. The protocol offers a host of unique features, including its use of NFTs for validators and integration with EigenLayer for added yields.<br><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>What is <a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a>?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">EtherFi stands out in the DeFi space as a liquid staking platform on Ethereum. It introduces an innovative approach by allowing users to stake ETH and earn rewards, while emphasizing a non-custodial framework where users maintain control over their keys.<br><br>One of EtherFi's distinctive features is the development of a non-fungible token (NFT) for every validator participating in the staking procedure. This strengthens the safety and independence of stakers within the system.<br><br>EtherFi's operations include integration with EigenLayer, which allows for additional yield earning on top of Ethereum's staking rewards. This integration allows users to engage in restaking without locking up their assets, providing flexibility to those interested in restaking.<br><br>The platform's native token, eETH, complements EtherFi's governance token by enabling users to directly manage the staking and restaking processes. The introduction of eETH has attracted considerable interest for the advancements it brings to the staking industry through its focus on the user, and its unique offerings. These include automatic restaking and the ability to earn rewards from EtherFi and EigenLayer. EtherFi's offering simplifies the staking process and enriches the user experience by offering additional incentives.<br><br>EtherFi's robust growth is underscored by its recent $23 million Series A funding round, highlighting the confidence in and support for the project from leading crypto investors. EtherFi's success in liquid restaking has significantly impacted the DeFi scene, as demonstrated by its recent financial milestone. The platform's growth in Total Value Locked (TVL) and its increasing number of users demonstrate the effectiveness of its strategy and the rising desire for decentralized financial options that give users more control.<br><br>How does EtherFi enhance Ethereum's decentralization?<br>EtherFi enables users to securely stake Ethereum through Operation Solo Staker, promoting a non-custodial approach. The operation allows anyone to run nodes via two 'paths'. Path 1 is permissionless, requires a 2 ETH bond to be put forward, and uses distributed validator technology (DVT) to allow stakers to validate and secure the blockchain. Path 2 sees stakers make a commitment to operate a node for two years and solo stake using DVT but without the need for a bond.<br><br>By making non-custodial staking easier for everyone, whether they're new to Ethereum or have been involved for a while, and dispersing network functions among numerous individuals without depending on intermediary institutions, EtherFi contributes to deeper decentralization for Ethereum.<br><br>The technical structure of EtherFi was specifically created to support a decentralized staking environment. Node operators can enter their public keys through smart contracts, and stakers can select operators to oversee validator nodes.<br><br>An auction system determines the allocation of staking opportunities to operators for greater fairness and transparency in network participation. Additionally, EtherFi offers unique features such as eETH, a liquid staking derivative token, and T-NFT and B-NFT tokens, which offer incentives and flexibility to stakers and node operators. EtherFi also introduces innovative features like eETH, a liquid staking derivative token, and T-NFT and B-NFT tokens, providing flexibility and incentives for stakers and node operators.<br><br>Apart from its technical achievements, EtherFi has promoted innovation and growth in Ethereum's ecosystem through its service layer, which provides a foundation for others to build out new services from. This not only encourages the creation of new applications and services but also provides a platform for growth and expansion within the Ethereum community.<br><br>What are the key features of eETH in EtherFi?<br>Among its many features, EtherFi has attracted attention for its non-custodial nature, automatic restaking feature, and partnership with EigenLayer for additional rewards.<br><br>Automatic restaking<br>The eETH platform has implemented an automatic restaking feature that allows Ethereum staked on the platform to generate extra rewards. By integrating with EigenLayer, EtherFi allows users to validate various software modules beyond the base layer of Ethereum, increasing their potential earnings.<br><br>T-NFT and B-NFT for enhanced security<br>EtherFi's staking method stands out due to its implementation of T-NFT (transferable non-fungible token) and B-NFT (bound non-fungible token). These tokens serve as proof of ownership for staked ETH and play an important role in the safe exchange of validator keys with node operators. The B-NFT is specifically linked to the person holding the validator key, guaranteeing a strong level of security and responsibility.<br><br>Liquidity pool and eETH mechanics<br>eETH functions as a rebasing ERC-20 token in a liquidity pool mechanism. This makes sure that an individual's eETH holdings will adjust proportionally to their share of EtherFi's overall Ethereum control. The protocol heavily depends on the liquidity pool, which enables issuing and burning of eETH and T-NFTs for delegated staking.<br><br>Permissionless withdrawals and rewards<br>EtherFi enables unrestricted withdrawals, providing the ability to skim partial rewards and fully unstake without relying on external authorization. This functionality is especially noteworthy in light of Ethereum's recent updates, which give stakers greater control over accessing their rewards and initial funds. This ability promotes fluidity and adaptability in the staking community.<br><br>Non-custodial staking<br><a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a> empowers users by allowing them to maintain control of their keys. This helps users to stake with confidence as they have complete ownership and control of their assets without relying on outside parties. This method significantly decreases the risk of counterparty involvement with node operators and protocols.<br><br>How does EtherFi's eETH work with EigenLayer for additional yields?<br>The introduction of EtherFi's eETH has significantly progressed the liquid staking tokens (LSTs) field by providing a non-custodial staking option that seamlessly incorporates EigenLayer, resulting in improved yield possibilities. Here's how eETH functions within this system to generate extra yields.<br><br>Liquid staking and restaking<br>With eETH, EtherFi users can stake Ethereum and get eETH tokens. These tokens can be automatically restaked on EigenLayer, allowing users to earn Ethereum staking rewards and additional yields without running their own node. This sets eETH apart from other LSTs, as it provides access to restaking yields through EigenLayer, increasing the potential earnings for its holders.<br><br>Integration with EigenLayer<br>EigenLayer enhances the Ethereum staking layer's capabilities by applying actively validated service (AVS) modules to verify non-EVM code. This allows individuals with staking and LST holdings, including eETH, to generate extra income by validating applications and services outside of Ethereum's main functions.<br><br>Security and control<br>A key aspect of eETH is its focus on security and giving users control. <a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a> uses sharding in its technical design to guarantee that stakers maintain authority over their keys — a major deviation from the usual method of node operators generating the keys. This strategy reduces the chances of risk from other parties and reinforces the non-custodial aspect of eETH staking.<br><br>Risks and considerations<br>Although the combination of eETH and EigenLayer offers attractive returns, it's important to recognize the potential risks involved in staking. These include the possibility of flaws in smart contracts and the potential for penalties if an AVS operator misbehaves or validation is unsuccessful. <a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a> has pledged to apply protocol governance when deciding which services to back, to minimize these risks for its users.<br><br>What is the <a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a> roadmap and its milestones?<br>EtherFi's was launched to meet developers' needs for a secure, decentralized staking protocol that emphasizes user control and self-custody.<br><br>Important achievements include:<br><br>Effectively implementing EtherFi's decentralized platform.<br><br>Enabling individuals to stake their ETH in increments of 32 validators through trusted node operators.<br><br>Partnering with Obol Labs to incorporate solo node operators.<br><br>A significant milestone was the launch of eETH, <a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi's</a> liquid staking token, which allows for fully permissionless participation in Ethereum staking. The launch helped achieve two major objectives of the project: enhancing liquidity and improving accessibility in the DeFi space.<br><br>The <a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a> roadmap demonstrates the importance of open-source values to the project. EtherFi intends to release its software services and code to the public, promoting transparency while building trust within the community.<br><br><a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a> is also preparing to integrate DVT phase 2, which will create a completely automated process for individual staking and promote Ethereum's more decentralized staking environment. The plan includes implementing DAO governance and a token generation event to establish a collective governance structure that guarantees the protocol's sustainability and flexibility.<br><br>The final word<br><a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a> stands out in DeFi by offering non-custodial Ethereum staking, giving users control over their keys. Its integration with EigenLayer allows for extra yields through restaking, increasing its value in the DeFi space.<br><br><a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi's</a> liquid staking token, eETH, simplifies staking and provides rewards from both EtherFi and EigenLayer. A successful $23 million Series A funding round highlighted the platform's growth and showed strong investor confidence in the project's future.<br><br>Many expect further developments for <a href=\"https://www.ether.fi/\" class=\"text-primary\">EtherFi</a>, particularly as its roadmap emphasizes innovation, with stand-out milestones including the eETH launch, solo node operator integration, and plans for DAO governance. These developments all aim to make Ethereum staking more accessible and secure for a broader audience.</p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "urmVNVMJJw",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "article07-1"
+        }
+      ]
+    }
+  }
+}
